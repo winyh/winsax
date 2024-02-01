@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://winyh.github.io/winsax/">
-    <img width="300" src="https://github.com/winyh/winsax/blob/master/public/whale.svg">
+    <img width="300" src="https://github.com/winyh/winsax/blob/main/public/whale.svg">
   </a>
 </p>
 
