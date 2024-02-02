@@ -11,7 +11,7 @@ on: [push]
 #       - main # default branch
 
 jobs:
-  Explore-GitHub-Actions:
+  Winsax-Deploy-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 流程通过 ${{ github.event_name }} 执行."
@@ -23,13 +23,15 @@ jobs:
       - run: echo "💡 仓库 ${{ github.repository }} 已检出到 GitHub 服务器工作目录."
       - run: echo "🖥️ 即将在GitHub服务器执行工作流."
       # 设置 node 环境版本
-      - name: Set node version dependencies
+      - name: Set node version
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
-          cache-dependency-path: subdir/package-lock.json
-      # 读取缓存
+          cache: npm
+      # 安装 npm 依赖
+      - name: Install node modules
+        run: npm install
+      # 缓存 node modules
       - name: Cache node modules
         uses: actions/cache@v3
         env:
@@ -39,9 +41,6 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      # 安装 npm 依赖
-      - name: Set node version dependencies
-        run: npm install
       # 列举仓库文件
       - name: List files in the repository
         run: |
