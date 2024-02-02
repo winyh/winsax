@@ -55,4 +55,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages # 将 dist 下面的产出推送到关联仓库的 gh-pages 分支，如果没有会自动创建
+      # 发布版本
+      - name: Create gitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: ${{ github.workspace }}-CHANGELOG.txt
+          name: ${{ github.ref }}
+          tag_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+          files: |
+            Release.txt
+            LICENSE
       - run: echo "🍏 当前任务流状态  ${{ job.status }}."
