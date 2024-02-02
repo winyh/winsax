@@ -63,7 +63,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: ${{ github.ref }}
+          name: ${{ github.ref_name }} # 仓库页右侧 Release 名称
           tag_name: ${{ github.ref }}
           draft: false
           prerelease: false
