@@ -33,7 +33,7 @@ jobs:
         run: npm install
       # 缓存 node modules
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-node-modules
         with:
@@ -55,5 +55,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages # 将 dist 下面的产出推送到关联仓库的 gh-pages 分支，如果没有会自动创建
-          dotfiles: true # 包括在提交中，即使被 .gitignore 文件忽略
       - run: echo "🍏 当前任务流状态  ${{ job.status }}."
