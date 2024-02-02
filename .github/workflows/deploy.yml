@@ -1,0 +1,60 @@
+name: winsax actions
+run-name: ${{ github.actor }} 创建自动化执行 🚀
+on: [push]
+
+# on:
+#   push:
+#     branches:
+#       - main # default branch
+#   pull_request:
+#     branches:
+#       - main # default branch
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 流程通过 ${{ github.event_name }} 执行."
+      - run: echo "🐧 任务流运行在 ${{ runner.os }} GitHub 提供的主机!"
+      - run: echo "🔎 当前分支为 ${{ github.ref }} ，当前仓库为 ${{ github.repository }}."
+      # 将代码仓库的内容检出工作目录中，待以下工作流中使用
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 仓库 ${{ github.repository }} 已检出到 GitHub 服务器工作目录."
+      - run: echo "🖥️ 即将在GitHub服务器执行工作流."
+      # 设置 node 环境版本
+      - name: Set node version dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: subdir/package-lock.json
+      # 读取缓存
+      - name: Cache node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+      # 安装 npm 依赖
+      - name: Set node version dependencies
+        run: npm install
+      # 列举仓库文件
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      # 构建项目
+      - name: Build
+        run: npm run build
+      # 部署到gh-pages分支
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages # 将 dist 下面的产出推送到关联仓库的 gh-pages 分支，如果没有会自动创建
+          dotfiles: true # 包括在提交中，即使被 .gitignore 文件忽略
+      - run: echo "🍏 当前任务流状态  ${{ job.status }}."
