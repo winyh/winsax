@@ -10,12 +10,6 @@ on: [push]
 #     branches:
 #       - main # default branch
 
-# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   Winsax-Deploy-Actions:
     runs-on: ubuntu-latest
