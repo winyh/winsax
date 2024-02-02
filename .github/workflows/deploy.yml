@@ -10,18 +10,24 @@ on: [push]
 #     branches:
 #       - main # default branch
 
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   Winsax-Deploy-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 流程通过 ${{ github.event_name }} 执行."
-      - run: echo "🐧 任务流运行在 ${{ runner.os }} GitHub 提供的主机!"
-      - run: echo "🔎 当前分支为 ${{ github.ref }} ，当前仓库为 ${{ github.repository }}."
+      - run: echo "🎄 任务流运行在 ${{ runner.os }} GitHub 提供的主机!"
+      - run: echo "🚀 当前分支为 ${{ github.ref }} ，当前仓库为 ${{ github.repository }}."
       # 将代码仓库的内容检出工作目录中，待以下工作流中使用
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "💡 仓库 ${{ github.repository }} 已检出到 GitHub 服务器工作目录."
-      - run: echo "🖥️ 即将在GitHub服务器执行工作流."
+      - run: echo "📮 仓库 ${{ github.repository }} 已检出到 GitHub 服务器工作目录."
+      - run: echo "🔱 即将在GitHub服务器执行工作流."
       # 设置 node 环境版本
       - name: Set node version
         uses: actions/setup-node@v4
