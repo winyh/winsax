@@ -18,7 +18,7 @@ import {
   CloudServerOutlined
 } from "@ant-design/icons"
 import { getCurrentYear } from "@/utils/util"
-import viteLogo from "/vite.svg"
+import whaleLogo from "/whale.svg"
 import "./index.less"
 
 const { Text } = Typography
@@ -140,16 +140,16 @@ const LayoutComponent = () => {
     <Layout className="layout">
       <Header className="head">
         <Flex align="center" justify="space-between">
-          <Link to="/winsax">
+          <Link to="/winsax/dashboard">
             <Flex align="center">
-              <img width={28} src={viteLogo} />
+              <img width={28} src={whaleLogo} />
               <h1 className="title">虎鲸系统</h1>
             </Flex>
           </Link>
           <Dropdown menu={{ items: menuItems }}>
             <Button type="text" size="large">
               <Flex align="center">
-                <img width={28} src={viteLogo} />
+                <img width={28} src={whaleLogo} />
                 <span className="name">winyh</span>
               </Flex>
             </Button>

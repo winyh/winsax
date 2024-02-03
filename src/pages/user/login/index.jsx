@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate()
   const onFinish = (values) => {
     console.log("Received values of form: ", values)
-    navigate("/winsax")
+    navigate("/winsax/dashboard")
   }
   return (
     <Flex className="login" align="center" justify="center">

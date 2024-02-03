@@ -1,7 +1,7 @@
 import { Navigate, useRoutes } from "react-router-dom"
 import { Suspense } from "react"
 import LayoutComponent from "@/layouts/index.jsx"
-import Demo from "@/pages/demo/index.jsx"
+import Dashboard from "@/pages/dashboard/index.jsx"
 import Login from "@/pages/user/login/index.jsx"
 import UserInfo from "@/pages/user/info/index.jsx"
 
@@ -11,8 +11,8 @@ const routes = [
     element: <LayoutComponent />,
     children: [
       {
-        path: "demo",
-        element: <Demo />
+        path: "dashboard",
+        element: <Dashboard />
       },
       {
         path: "user/info",
