@@ -43,54 +43,48 @@ function getItem(label, key, icon, children, type) {
 }
 const items = [
   getItem("控制台", "dashboard", <DashboardOutlined />, [
-    getItem("Option 1", "1"),
-    getItem("Option 2", "2"),
-    getItem("Option 3", "3"),
-    getItem("Option 4", "4")
+    getItem("分析页", "1"),
+    getItem("工作台", "2")
   ]),
   getItem("用户系统", "user", <TeamOutlined />, [
-    getItem("Option 5", "5"),
-    getItem("Option 6", "6"),
-    getItem("Submenu", "Submenu", null, [
-      getItem("Option 7", "7"),
-      getItem("Option 8", "8")
-    ])
+    getItem("用户列表", "5"),
+    getItem("个人中心", "6")
   ]),
   getItem("权限系统", "permission", <SafetyCertificateOutlined />, [
-    getItem("Option 9", "9"),
-    getItem("Option 10", "10"),
-    getItem("Option 11", "11"),
-    getItem("Option 12", "12")
+    getItem("后台用户", "9"),
+    getItem("角色管理", "10"),
+    getItem("组织管理", "Submenu", null, [
+      getItem("组织列表", "7"),
+      getItem("部门管理", "8"),
+      getItem("岗位管理", "11")
+    ])
   ]),
   getItem("客服中心", "call", <CommentOutlined />, [
-    getItem("Option 13", "13"),
-    getItem("Option 14", "14"),
-    getItem("Option 15", "15"),
-    getItem("Option 16", "16")
+    getItem("意见反馈", "13"),
+    getItem("评论列表", "14"),
+    getItem("申请列表", "15")
   ]),
   getItem("统一消息", "message", <AlertOutlined />, [
-    getItem("Option 17", "17"),
-    getItem("Option 18", "18"),
-    getItem("Option 19", "19"),
-    getItem("Option 20", "20")
+    getItem("短信通知", "17"),
+    getItem("邮件通知", "18"),
+    getItem("消息类型", "19")
   ]),
   getItem("基础数据", "basic", <DatabaseOutlined />, [
-    getItem("Option 21", "21"),
-    getItem("Option 22", "22"),
-    getItem("Option 23", "23"),
-    getItem("Option 24", "24")
+    getItem("文件管理", "21"),
+    getItem("行政区划", "22"),
+    getItem("常见问题", "23"),
+    getItem("快捷入口", "24"),
+    getItem("菜单管理", "221")
   ]),
   getItem("系统设置", "system", <SettingOutlined />, [
-    getItem("Option 25", "25"),
-    getItem("Option 26", "26"),
-    getItem("Option 27", "27"),
-    getItem("Option 28", "28")
+    getItem("系统信息", "25"),
+    getItem("系统字典", "26"),
+    getItem("全局参数", "27"),
+    getItem("日志记录", "28")
   ]),
   getItem("数据备份", "backup", <CloudServerOutlined />, [
-    getItem("Option 29", "29"),
-    getItem("Option 30", "30"),
-    getItem("Option 31", "31"),
-    getItem("Option 32", "32")
+    getItem("备份记录", "29"),
+    getItem("定时任务", "30")
   ])
 ]
 

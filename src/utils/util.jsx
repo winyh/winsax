@@ -3,4 +3,9 @@ const getCurrentYear = () => {
   return date.getFullYear()
 }
 
-export { getCurrentYear }
+const getLastYear = () => {
+  const date = new Date()
+  return `${date.getFullYear() + 1}-${date.getMonth()}-${date.getDate()}`
+}
+
+export { getCurrentYear, getLastYear }
