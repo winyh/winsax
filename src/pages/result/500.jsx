@@ -20,4 +20,4 @@ const Result500 = () => {
     />
   )
 }
-export default Result403
+export default Result500
