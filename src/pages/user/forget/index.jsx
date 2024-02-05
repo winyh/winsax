@@ -5,18 +5,18 @@ import { Button, Checkbox, Form, Input, Card, Flex, Space } from "antd"
 
 import "./index.less"
 
-const Register = () => {
+const Forget = () => {
   const navigate = useNavigate()
   const onFinish = (values) => {
     console.log("Received values of form: ", values)
     navigate("/winsax/dashboard")
   }
   return (
-    <Flex className="register" align="center" justify="center">
-      <Card title="用户注册" style={{ width: 360 }}>
+    <Flex className="forget" align="center" justify="center">
+      <Card title="找回密码" style={{ width: 360 }}>
         <Form
-          name="normal_Register"
-          className="Register-form"
+          name="normal_Forget"
+          className="Forget-form"
           initialValues={{
             remember: true
           }}
@@ -41,14 +41,14 @@ const Register = () => {
             rules={[
               {
                 required: true,
-                message: "请输入密码！"
+                message: "请输入新密码！"
               }
             ]}
           >
             <Input
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder="请输入密码"
+              placeholder="请输入新密码"
             />
           </Form.Item>
           <Form.Item
@@ -56,20 +56,20 @@ const Register = () => {
             rules={[
               {
                 required: true,
-                message: "请确认密码！"
+                message: "请确认新密码！"
               }
             ]}
           >
             <Input
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder="请确认密码"
+              placeholder="请确认新密码"
             />
           </Form.Item>
 
           <Form.Item>
             <Button type="primary" htmlType="submit" block>
-              注册
+              提交
             </Button>
             <div className="register-link">
               Or <Link to="/winsax/login">已有账号，立即登录</Link>
@@ -80,4 +80,4 @@ const Register = () => {
     </Flex>
   )
 }
-export default Register
+export default Forget

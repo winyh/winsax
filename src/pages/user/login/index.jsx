@@ -65,7 +65,7 @@ const Login = () => {
             <Button type="primary" htmlType="submit" block>
               登录
             </Button>
-            <div className="register">
+            <div className="register-link">
               Or <Link to="/winsax/register">立即注册</Link>
             </div>
           </Form.Item>

@@ -42,9 +42,9 @@ function getItem(label, key, icon, children, type) {
   }
 }
 const items = [
-  getItem("控制台", "dashboard", <DashboardOutlined />, [
-    getItem("分析页", "1"),
-    getItem("工作台", "2")
+  getItem("控制台", "winsax", <DashboardOutlined />, [
+    getItem("分析页", "dashboard"),
+    getItem("工作台", "workplace")
   ]),
   getItem("用户系统", "user", <TeamOutlined />, [
     getItem("用户列表", "5"),
@@ -53,9 +53,9 @@ const items = [
   getItem("权限系统", "permission", <SafetyCertificateOutlined />, [
     getItem("后台用户", "9"),
     getItem("角色管理", "10"),
-    getItem("组织管理", "Submenu", null, [
+    getItem("组织管理", "submenu", null, [
       getItem("组织列表", "7"),
-      getItem("部门管理", "8"),
+      getItem("部门管理", "part"),
       getItem("岗位管理", "11")
     ])
   ]),
@@ -80,7 +80,10 @@ const items = [
     getItem("系统信息", "25"),
     getItem("系统字典", "26"),
     getItem("全局参数", "27"),
-    getItem("日志记录", "28")
+    getItem("日志记录", "28"),
+    getItem("站点SEO", "281"),
+    getItem("邮箱设置", "282"),
+    getItem("地图密钥", "283")
   ]),
   getItem("数据备份", "backup", <CloudServerOutlined />, [
     getItem("备份记录", "29"),
@@ -110,6 +113,12 @@ const LayoutComponent = () => {
     } else {
       setOpenKeys(latestOpenKey ? [latestOpenKey] : [])
     }
+  }
+
+  const onClick = ({ item, key, keyPath }) => {
+    let path = `/${keyPath.reverse().join("/")}`
+    console.log({ item, key, path })
+    navigate(path)
   }
 
   const menuItems = [
@@ -156,6 +165,7 @@ const LayoutComponent = () => {
             mode="inline"
             openKeys={openKeys}
             onOpenChange={onOpenChange}
+            onClick={onClick}
             style={{
               width: 256
             }}

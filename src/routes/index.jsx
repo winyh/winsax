@@ -1,8 +1,14 @@
 import { Navigate, useRoutes } from "react-router-dom"
-import { Suspense } from "react"
+import { Suspense, lazy } from "react"
 import LayoutComponent from "@/layouts/index.jsx"
-import Dashboard from "@/pages/dashboard/index.jsx"
+import Dashboard from "@/pages/home/dashboard/index.jsx"
+import Workplace from "@/pages/home/workplace/index.jsx"
+import Result403 from "@/pages/result/403.jsx"
+import Result404 from "@/pages/result/404.jsx"
+import Result500 from "@/pages/result/500.jsx"
 import Login from "@/pages/user/login/index.jsx"
+import Register from "@/pages/user/register/index.jsx"
+import Forget from "@/pages/user/forget/index.jsx"
 import UserInfo from "@/pages/user/info/index.jsx"
 
 const routes = [
@@ -11,8 +17,16 @@ const routes = [
     element: <LayoutComponent />,
     children: [
       {
+        path: "403",
+        element: <Result403 />
+      },
+      {
         path: "dashboard",
         element: <Dashboard />
+      },
+      {
+        path: "workplace",
+        element: <Workplace />
       },
       {
         path: "user/info",
@@ -38,15 +52,19 @@ const routes = [
   },
   {
     path: "/winsax/register",
-    element: <div>开发中 💪...</div>
+    element: <Register />
   },
   {
     path: "/winsax/forget",
-    element: <div>开发中 💪...</div>
+    element: <Forget />
   },
   {
     path: "*",
-    element: <div>404</div>
+    element: <Result404 />
+  },
+  {
+    path: "/winsax/500",
+    element: <Result500 />
   }
 ]
 
