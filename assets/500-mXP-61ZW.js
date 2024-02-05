@@ -1,0 +1,1 @@
+import{o,l as t,B as e}from"./index-z7M41aEX.js";import{R as r}from"./index-RI9_j_YF.js";import"./ExclamationCircleFilled-3TStet04.js";const l=()=>{const s=o(),a=()=>{s("/winsax/dashboard")};return t.jsx(r,{status:"500",title:"500",subTitle:"对不起, 当前服务器异常.",extra:t.jsx(e,{type:"primary",onClick:a,children:"返回首页"})})};export{l as default};

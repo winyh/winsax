@@ -1,0 +1,1 @@
+import{o,l as t,B as e}from"./index-z7M41aEX.js";import{R as r}from"./index-RI9_j_YF.js";import"./ExclamationCircleFilled-3TStet04.js";const l=()=>{const s=o(),a=()=>{s("/winsax/dashboard")};return t.jsx(r,{status:"404",title:"404",subTitle:"对不起, 您访问的页面不存在.",extra:t.jsx(e,{type:"primary",onClick:a,children:"返回首页"})})};export{l as default};
