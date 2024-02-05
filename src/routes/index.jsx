@@ -90,19 +90,24 @@ const routes = [
         element: <Role />
       },
       {
-        path: "permission/organization",
+        path: "permission",
         children: [
           {
-            path: "list",
-            element: <Role />
-          },
-          {
-            path: "department",
-            element: <Role />
-          },
-          {
-            path: "post",
-            element: <Role />
+            path: "organization",
+            children: [
+              {
+                path: "list",
+                element: <Role />
+              },
+              {
+                path: "department",
+                element: <Role />
+              },
+              {
+                path: "post",
+                element: <Role />
+              }
+            ]
           }
         ]
       },

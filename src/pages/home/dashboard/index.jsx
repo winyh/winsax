@@ -39,25 +39,14 @@ const items = [
   },
   {
     key: "5",
-    label: "技术栈",
-    children: "Vite + React + Antd"
+    label: "定制研发",
+    children: "3000 元起"
   },
   {
     key: "6",
     label: "状态",
     children: <Badge status="processing" text="运行中" />,
     span: 3
-  },
-  {
-    key: "7",
-    label: "到期时间",
-    children: getLastYear(),
-    span: 2
-  },
-  {
-    key: "8",
-    label: "定制研发",
-    children: "3000 元起"
   },
   {
     key: "10",
