@@ -43,51 +43,51 @@ function getItem(label, key, icon, children, type) {
 }
 const items = [
   getItem("控制台", "winsax", <DashboardOutlined />, [
-    getItem("分析页", "dashboard"),
-    getItem("工作台", "workplace")
+    getItem("工作台", "workplace"),
+    getItem("分析页", "dashboard")
   ]),
-  getItem("用户系统", "user", <TeamOutlined />, [
-    getItem("用户列表", "5"),
-    getItem("个人中心", "6")
+  getItem("用户系统", "winsax/user", <TeamOutlined />, [
+    getItem("用户列表", "list"),
+    getItem("个人中心", "info")
   ]),
-  getItem("权限系统", "permission", <SafetyCertificateOutlined />, [
-    getItem("后台用户", "9"),
-    getItem("角色管理", "10"),
-    getItem("组织管理", "submenu", null, [
-      getItem("组织列表", "7"),
-      getItem("部门管理", "part"),
-      getItem("岗位管理", "11")
+  getItem("权限系统", "winsax/permission", <SafetyCertificateOutlined />, [
+    getItem("后台用户", "admin"),
+    getItem("角色管理", "role"),
+    getItem("组织管理", "organization", null, [
+      getItem("组织列表", "list"),
+      getItem("部门管理", "department"),
+      getItem("岗位管理", "post")
     ])
   ]),
-  getItem("客服中心", "call", <CommentOutlined />, [
-    getItem("意见反馈", "13"),
-    getItem("评论列表", "14"),
-    getItem("申请列表", "15")
+  getItem("客服中心", "winsax/call", <CommentOutlined />, [
+    getItem("意见反馈", "feedback"),
+    getItem("评论列表", "comment"),
+    getItem("申请列表", "apply")
   ]),
-  getItem("统一消息", "message", <AlertOutlined />, [
-    getItem("短信通知", "17"),
-    getItem("邮件通知", "18"),
-    getItem("消息类型", "19")
+  getItem("统一消息", "winsax/message", <AlertOutlined />, [
+    getItem("短信通知", "sms"),
+    getItem("邮件通知", "email"),
+    getItem("消息类型", "type")
   ]),
-  getItem("基础数据", "basic", <DatabaseOutlined />, [
-    getItem("文件管理", "21"),
-    getItem("行政区划", "22"),
-    getItem("常见问题", "23"),
-    getItem("快捷入口", "24"),
-    getItem("菜单管理", "221")
+  getItem("基础数据", "winsax/basic", <DatabaseOutlined />, [
+    getItem("文件管理", "file"),
+    getItem("行政区划", "area"),
+    getItem("常见问题", "question"),
+    getItem("快捷入口", "quick"),
+    getItem("菜单管理", "menu")
   ]),
-  getItem("系统设置", "system", <SettingOutlined />, [
-    getItem("系统信息", "25"),
-    getItem("系统字典", "26"),
-    getItem("全局参数", "27"),
-    getItem("日志记录", "28"),
-    getItem("站点SEO", "281"),
-    getItem("邮箱设置", "282"),
-    getItem("地图密钥", "283")
+  getItem("系统设置", "winsax/system", <SettingOutlined />, [
+    getItem("系统信息", "info"),
+    getItem("系统字典", "dictionary"),
+    getItem("全局参数", "parameter"),
+    getItem("日志记录", "log"),
+    getItem("站点SEO", "seo"),
+    getItem("邮箱设置", "email"),
+    getItem("地图密钥", "map")
   ]),
-  getItem("数据备份", "backup", <CloudServerOutlined />, [
-    getItem("备份记录", "29"),
-    getItem("定时任务", "30")
+  getItem("数据备份", "winsax/backup", <CloudServerOutlined />, [
+    getItem("备份记录", "list"),
+    getItem("定时任务", "regular")
   ])
 ]
 
