@@ -1,15 +1,17 @@
 import { Navigate, useRoutes } from "react-router-dom"
 import { Suspense, lazy } from "react"
 import LayoutComponent from "@/layouts/index.jsx"
-import Dashboard from "@/pages/home/dashboard/index.jsx"
-import Workplace from "@/pages/home/workplace/index.jsx"
-import Result403 from "@/pages/result/403.jsx"
-import Result404 from "@/pages/result/404.jsx"
-import Result500 from "@/pages/result/500.jsx"
-import Login from "@/pages/user/login/index.jsx"
-import Register from "@/pages/user/register/index.jsx"
-import Forget from "@/pages/user/forget/index.jsx"
-import UserInfo from "@/pages/user/info/index.jsx"
+
+// 组件懒加载
+const Dashboard = lazy(() => import("@/pages/home/dashboard/index.jsx"))
+const Workplace = lazy(() => import("@/pages/home/workplace/index.jsx"))
+const Result403 = lazy(() => import("@/pages/result/403.jsx"))
+const Result404 = lazy(() => import("@/pages/result/404.jsx"))
+const Result500 = lazy(() => import("@/pages/result/500.jsx"))
+const Login = lazy(() => import("@/pages/user/login/index.jsx"))
+const Register = lazy(() => import("@/pages/user/register/index.jsx"))
+const Forget = lazy(() => import("@/pages/user/forget/index.jsx"))
+const UserInfo = lazy(() => import("@/pages/user/info/index.jsx"))
 
 const routes = [
   {
