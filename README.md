@@ -16,7 +16,7 @@
 
 <p align="center">简洁-清晰-强大好用</p>
 
-##### 文档
+#### 文档
 
 1.在线体验：[Demo](https://winyh.github.io/winsax/)
 
@@ -24,7 +24,7 @@
 
 3.路线图： [Roadmap](https://github.com/winyh/winsax/wiki/%E8%B7%AF%E7%BA%BF%E5%9B%BE)
 
-##### 技术栈
+#### 技术栈
 
 前端 [Next.js](https://nextjs.org) / [Nuxt.js](https://nuxt.com) / 或者后端模板引擎渲染
 
@@ -32,26 +32,32 @@
 
 服务端 Golang / Rust / Node 提供 restful api 接口
 
-##### 开始
+#### 开始
 
 - [安装](#安装)
 - [运行](#运行)
 - [目录](#目录)
 - [拓展](#拓展)
 
-##### 安装
+#### 安装
 
 ```
 npm i
 ```
 
-##### 运行
+#### 运行
 
 ```
 npm run dev
 ```
 
-##### 目录
+#### 效果图
+
+<div align="center">
+  <img width="100%" src="https://github.com/winyh/winsax/blob/main/public/demo.png">
+</div>
+
+#### 目录
 
 ```
 ├── public                                     // 静态资源
@@ -61,13 +67,13 @@ npm run dev
 |—— README.md                                  // 说明文档
 ```
 
-##### 拓展
+#### 拓展
 
 目标：基于通用后台管理系统快速拓展其他产品
 
 1. 内容管理系统
 2. 虚拟电商系统
 
-##### TodoList
+#### TodoList
 
 doing ～

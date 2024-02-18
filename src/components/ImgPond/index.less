@@ -1,0 +1,89 @@
+.imgDefault {
+  position: relative;
+  .remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 0px 4px;
+    color: #fff;
+    text-align: center;
+    background-color: #ff4d4f;
+    border-bottom-left-radius: 4px;
+    visibility: hidden;
+  }
+  &:hover {
+    .remove {
+      visibility: visible;
+      cursor: pointer;
+    }
+  }
+  .top {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: 999;
+    padding: 0px 4px;
+    color: #fff;
+    text-align: center;
+    background-color: #ff4d4f;
+    border-top-left-radius: 4px;
+    visibility: hidden;
+  }
+  &:hover {
+    .top {
+      visibility: visible;
+      cursor: pointer;
+    }
+  }
+}
+.imgManage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 30px;
+  border: 1px dashed #ccc;
+  cursor: pointer;
+}
+
+.imgBox {
+  display: flex;
+  flex-wrap: wrap;
+  .box {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 20px;
+    border: 1px solid #eee;
+    .check {
+      position: absolute;
+      top: 2px;
+      right: 4px;
+    }
+    .origin {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      font-size: 12px;
+      white-space: nowrap;
+      text-align: center;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  .page {
+    display: flex;
+    align-items: center;
+  }
+}
