@@ -144,6 +144,7 @@ const Component = ({ is, children, ...restProps }) => {
   if (is && is.indexOf(".") !== -1) {
     const tags = is.split(".")
     NodeTag = arr[tags[0]][tags[1]]
+    console.log({ NodeTag })
   } else {
     NodeTag = arr[is]
     if (!NodeTag) {
